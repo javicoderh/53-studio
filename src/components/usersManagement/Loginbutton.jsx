@@ -7,6 +7,7 @@ const LoginButton = () => {
   const handleLogin = () => {
     loginWithRedirect({
       authorizationParams: {
+        redirect_uri: "https://53-studio.vercel.app",
         prompt: "login", 
       },
     });
