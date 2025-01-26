@@ -15,6 +15,7 @@ const AuthProvider = ({ children }) => {
       clientId="Q9AsJxrTR2W6gbHz1pILLHrxLaRlt4b2"
       authorizationParams={{
         redirect_uri: "https://53-studio.vercel.app",
+        prompt: "login"
       }}
       onRedirectCallback={onRedirectCallback}
     >

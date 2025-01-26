@@ -12,7 +12,7 @@ const App = () => {
 domain="dev-epk0vphz3k7odhlz.us.auth0.com"
 clientId="Q9AsJxrTR2W6gbHz1pILLHrxLaRlt4b2"
 authorizationParams={{
-  redirect_uri: "https://53-studio.vercel.app",
+  prompt: "login",
 }}
 >
    <ShoppingCartProvider >    
