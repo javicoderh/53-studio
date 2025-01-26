@@ -6,6 +6,7 @@ import ProductsPage from "../products/Products";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCartProvider } from "../Context/ShopingCartContext";
 import LoginButton from "../usersManagement/Loginbutton";
+
   
 const AppRouter = () => {
     const { isAuthenticated } = useAuth0();
