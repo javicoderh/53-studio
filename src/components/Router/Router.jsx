@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "../Landing/Landing";
-import CheckoutPage from "../checkout/Checkout";
-import ProductsPage from "../products/Products";
+import LandingPage from "../Landing/Landing.jsx";
+import CheckoutPage from "../checkout/Checkout.jsx";
+import ProductsPage from "../products/Products.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCartProvider } from "../Context/ShopingCartContext";
 import LoginButton from "../usersManagement/Loginbutton";
+
 
   
 const AppRouter = () => {
