@@ -6,6 +6,7 @@ import ProductsPage from "../products/Products.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCartProvider } from "../Context/ShopingCartContext";
 import LoginButton from "../usersManagement/Loginbutton";
+import Profile from "../usersManagement/userProfile.jsx";
 
 
   
@@ -22,6 +23,7 @@ const AppRouter = () => {
               <Route path="/" element={<LandingPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/products" element={<ProductsPage />} />
+              <Route path="/profile" element={<Profile />} />
               {/* Add additional routes here as needed */}
             </Routes>
           ) : (
