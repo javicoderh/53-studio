@@ -5,13 +5,15 @@ const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated, user } = useAuth0();
 
   const handleLogin = async () => {
+    // Redirigir al login de Auth0
     await loginWithRedirect({
       authorizationParams: {
-        redirect_uri: "https://53-studio.vercel.app",
+        redirect_uri: "https://53-studio.vercel.app", // URL de tu frontend
         prompt: "login",
       },
     });
 
+    // Si el usuario está autenticado, enviar los datos al backend
     if (isAuthenticated && user) {
       try {
         const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
@@ -20,8 +22,8 @@ const LoginButton = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            userId: user.sub, // Unique ID from Auth0
-            userName: user.name, // User's name from Auth0
+            userId: user.sub, // ID único del usuario desde Auth0
+            userName: user.name, // Nombre del usuario desde Auth0
           }),
         });
 
@@ -36,7 +38,18 @@ const LoginButton = () => {
 
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <button onClick={handleLogin} style={{ padding: "1rem 2rem", fontSize: "1.2rem", cursor: "pointer" }}>
+      <button
+        onClick={handleLogin}
+        style={{
+          padding: "1rem 2rem",
+          fontSize: "1.2rem",
+          cursor: "pointer",
+          background: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+        }}
+      >
         Log In
       </button>
     </div>
