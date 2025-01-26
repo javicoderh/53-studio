@@ -9,7 +9,7 @@ const LoginButton = () => {
       <button
         onClick={() =>
           loginWithRedirect({
-            redirectUri: window.location.origin,
+            redirectUri: "https://53-studio.vercel.app",
           })
         }
         style={{ padding: "1rem 2rem", fontSize: "1.2rem", cursor: "pointer" }}
