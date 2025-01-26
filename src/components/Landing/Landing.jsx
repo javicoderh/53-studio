@@ -16,9 +16,7 @@ const LandingPage = () => {
           <p>
             Discover high-quality samples crafted by the best, exclusively for you.
           </p>
-          <button className="explore-button">
-            Explore Now
-          </button>
+          
         </section>
       </main>
 

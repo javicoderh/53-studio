@@ -3,22 +3,29 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "../Landing/Landing";
 import CheckoutPage from "../checkout/Checkout";
 import ProductsPage from "../products/Products";
+import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCartProvider } from "../Context/ShopingCartContext";
-
-const AppRouter = () => {
-  return (
-
-<ShoppingCartProvider>
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        {/* Add additional routes here as needed */}
-      </Routes>
-    </Router>
-</ShoppingCartProvider>
-  );
-};
-
-export default AppRouter;
+import LoginButton from "../usersManagement/Loginbutton";
+  
+  const AppRouter = () => {
+    const { isAuthenticated } = useAuth0();
+  
+    return (
+      <ShoppingCartProvider>
+        <Router>
+          {isAuthenticated ? (
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
+              <Route path="/products" element={<ProductsPage />} />
+              {/* Add additional routes here as needed */}
+            </Routes>
+          ) : (
+            <LoginButton />
+          )}
+        </Router>
+      </ShoppingCartProvider>
+    );
+  };
+  
+  export default AppRouter;
