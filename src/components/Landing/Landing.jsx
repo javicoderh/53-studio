@@ -1,5 +1,6 @@
 import React from "react";
 import "./Landing.css";
+import LogoutButton from "../usersManagement/LogoutButton";
 
 const LandingPage = () => {
   return (
@@ -16,7 +17,7 @@ const LandingPage = () => {
           <p>
             Discover high-quality samples crafted by the best, exclusively for you.
           </p>
-          
+          <LogoutButton />
         </section>
       </main>
 
