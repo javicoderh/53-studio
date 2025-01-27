@@ -12,7 +12,7 @@ const Header = () => {
      <header className="header">
         <img className="logo" src={logo} alt="" height={100} />
         <h1>Studio 53</h1>
-        {isAuthenticated ?  <LogoutButton /> : <LoginButton /> }
+        {isAuthenticated ?  <LoginButton /> : <LogoutButton />}
     </header>
           
     );
