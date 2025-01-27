@@ -1,7 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import '.././Landing/Landing.css'
-import logo from '../../assets/logo.png'
 import Header from "../header/header";
 
 const LoginButton = () => {

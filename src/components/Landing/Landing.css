@@ -107,9 +107,6 @@
   }
 
   .login {
-    position:absolute;
-    right: 3%;
-    top: 20%;
     background-color: var(--tertiary-color);
     border: solid 2px #005fc5;
     color: white;
