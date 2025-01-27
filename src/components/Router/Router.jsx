@@ -19,17 +19,12 @@ const AppRouter = () => {
     return (
       <ShoppingCartProvider>
         <Router>
-          {isAuthenticated ? (
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/profile" element={<Profile />} />
-              {/* Add additional routes here as needed */}
-            </Routes>
-          ) : (
-            <LoginButton />
-          )}
+            </Routes>          
         </Router>
       </ShoppingCartProvider>
     );
