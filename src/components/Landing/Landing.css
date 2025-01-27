@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-    --primary-color: #ff5c00; /* Electric Orange */
-    --secondary-color: #f7f7e4; /* Light Beige */
-    --tertiary-color: #007bff; /* Electric Blue */
+    --primary-color: #FF6700; /* Electric Orange */
+    --secondary-color: #fffff5; /* Light Beige */
+    --tertiary-color: #007FFF; /* Electric Blue */
   }
   
   .landing-page {
@@ -10,20 +12,38 @@
     height: 100vh;
     width: 100vw;
     overflow-y: auto;
-    font-family: Arial, sans-serif;
+    font-family: Inter,sans-serif;
+    font-weight: 100;
   }
   
   .header {
+    position: relative;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: #333;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px 1px rgba(102, 99, 99, 0.7);
+    border: solid 1px #a1a18e;
+    z-index: 2;    
   }
   
   .header h1 {
     font-size: 2rem;
+    text-shadow: 
+    0px 0 var(--tertiary-color),  /* Sombra a la derecha */
+    -1px 0 var(--tertiary-color), /* Sombra a la izquierda */
+    0 1px var(--tertiary-color),  /* Sombra abajo */
+    0 0px var(--tertiary-color); /* Sombra arriba */
     margin: 0;
+    font-weight: 100 !important;
+  }
+
+  .header .logo {
+    position:absolute;
+    left: 40px;
+    border: solid 2px var(--secondary-color);
+    box-shadow: 0px 0px 80px 3px #a2d1ff;
+    border-radius: 50%;
   }
   
   .main-content {
@@ -33,6 +53,8 @@
     justify-content: center;
     background-color: var(--primary-color);
     padding: 1.5rem;
+    font-family: Inter,sans-serif;
+    font-weight: 100;
   }
   
   .content-section {
@@ -46,7 +68,7 @@
   
   .content-section h2 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 100;
     color: var(--secondary-color);
     margin-bottom: 1rem;
   }
@@ -66,6 +88,8 @@
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
+    font-family: Inter,sans-serif;
+    font-weight: 100;
   }
   
   .explore-button:hover {
@@ -74,9 +98,37 @@
   
   .footer {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: #333;
     text-align: center;
     padding: 1rem;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+  }
+
+  .login {
+    background-color: var(--tertiary-color);
+    border: solid 2px #005fc5;
+    color: white;
+    text-shadow: 
+    1px 0 #333,  /* Sombra a la derecha */
+    -1px 0 #333, /* Sombra a la izquierda */
+    0 1px #333,  /* Sombra abajo */
+    0 -1px #333; /* Sombra arriba */
+    transform: scale(1.2);
+    font-family: Inter,sans-serif;
+    font-weight: 100;
+  }
+
+  .login:hover {
+    background-color: #3f95f1;
+    border: solid 1px #0064cf;
+    text-shadow: 
+    1px 0 #333,  /* Sombra a la derecha */
+    -1px 0 #333, /* Sombra a la izquierda */
+    0 1px #333,  /* Sombra abajo */
+    0 -1px #333; /* Sombra arriba */
+    transform: scale(1.19);
+    transition: 0.3s;
   }
   

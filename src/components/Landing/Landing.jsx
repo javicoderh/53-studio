@@ -1,16 +1,12 @@
 import React from "react";
 import "./Landing.css";
 import LogoutButton from "../usersManagement/LogoutButton";
+import Header from "../header/header";
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      {/* Header */}
-      <header className="header">
-        <h1>Studio 53</h1>
-      </header>
-
-      {/* Main Content */}
+    <div className="landing-page">      
+      <Header />      
       <main className="main-content">
         <section className="content-section">
           <h2>Elite Digital Samples</h2>

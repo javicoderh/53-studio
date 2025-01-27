@@ -1,5 +1,8 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import '.././Landing/Landing.css'
+import logo from '../../assets/logo.png'
+import Header from "../header/header";
 
 const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated, user } = useAuth0();
@@ -37,21 +40,19 @@ const LoginButton = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <button
-        onClick={handleLogin}
-        style={{
-          padding: "1rem 2rem",
-          fontSize: "1.2rem",
-          cursor: "pointer",
-          background: "#007bff",
-          color: "#fff",
-          border: "none",
-          borderRadius: "5px",
-        }}
-      >
-        Log In
-      </button>
+    <div className="landing-page">      
+      <Header />
+      <main className="main-content">
+        <button
+          className="login"
+          onClick={handleLogin}
+        >
+          Login
+        </button>
+      </main>
+      <footer className="footer">
+        <p>&copy; 2025 Studio 53. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

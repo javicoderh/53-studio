@@ -1,7 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 100;
+
+  --primary-color: #ff5c00; /* Electric Orange */
+  --secondary-color: #f7f7e4; /* Light Beige */
+  --tertiary-color: #007bff; /* Electric Blue */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -14,8 +18,8 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: 100;
+  color: #333;
   text-decoration: inherit;
 }
 a:hover {
@@ -25,9 +29,12 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--primary-color);
 }
 
 h1 {
