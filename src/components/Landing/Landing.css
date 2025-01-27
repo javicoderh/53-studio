@@ -160,4 +160,12 @@
     transform: scale(0.99);
     transition: 0.3s;
   }
+
+  .userPic {
+  position: absolute;
+  right: 6%;
+  top: 20%;
+  border-radius: 50%;
+  background-color: black;
+  }
   

@@ -6,12 +6,13 @@ import LoginButton from "../usersManagement/Loginbutton";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-  const { isAuthenticated } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
     return (
      <header className="header">
         <img className="logo" src={logo} alt="" height={100} />
-        <h1>Studio 53</h1>      
+        <h1>Studio 53</h1>  
+        {isAuthenticated && <img className="userPic" src={user.picture} height={50} />}    
         {isAuthenticated && <LogoutButton /> }
     </header>
           
