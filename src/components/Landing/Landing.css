@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+@keyframes electricFrame {
+  0% {
+    box-shadow: 0px 0px 10px 5px #a2d1ff;
+  }
+  50% {
+    box-shadow: 0px 0px 0px 2px #6eb4ff;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px #a2d1ff;
+  }
+}
+
+/* Clase para aplicar la animación */
+.electric-box {
+  width: 200px; /* Ajusta s
+
+
 :root {
     --primary-color: #FF6700; /* Electric Orange */
     --secondary-color: #fffff5; /* Light Beige */
@@ -44,6 +61,7 @@
     border: solid 2px var(--secondary-color);
     box-shadow: 0px 0px 80px 3px #a2d1ff;
     border-radius: 50%;
+    animation: electricFrame 1s infinite;
   }
   
   .main-content {
