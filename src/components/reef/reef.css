@@ -1,3 +1,5 @@
+
+
 body {
     display: flex;
     justify-content: center;
@@ -38,10 +40,47 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
   
-  /* Puertas encima del botón */
   .puerta {
     flex: 1;
-    background: linear-gradient(45deg, #ffffff, #d8abff, #86cdff);
-    transition: clip-path 1s ease-in-out;
+    background: #c0c0c0; /* Base gris metálico más saturado */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Destello diagonal con más saturación */
+  .puerta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+      transparent 10%, 
+      #b0b0b0 25%, 
+      #d9d9d9 40%, 
+      #ffffff 50%, 
+      #d9d9d9 60%, 
+      #c0c0c0 75%, 
+      transparent 90%
+    );
+    background-size: 300% 300%;
+    animation: brilloDiagonal 1s infinite linear alternate;
+    opacity: 1;
+  }
+  
+  /* Hacer las animaciones asincrónicas */
+  .izquierda::before {
+    animation-delay: 0s; /* Comienza inmediatamente */
+  }
+  
+  .derecha::before {
+    animation-delay: 1s; /* Comienza con 2s de retraso */
+  }
+  
+  /* Animación del brillo continuo en diagonal */
+  @keyframes brilloDiagonal {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
   
