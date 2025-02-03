@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import '.././Landing/Landing.css'
 import Header from "../header/header";
+import AnimatedDoors from "../reef/reef";
 
 const LoginButton = () => {
   const { loginWithRedirect, isAuthenticated, user } = useAuth0();
@@ -42,6 +43,7 @@ const LoginButton = () => {
     <div className="landing-page">      
       <Header />
       <main className="main-content">
+        <AnimatedDoors />
         <button
           className="login"
           onClick={handleLogin}

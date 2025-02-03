@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+  }
+  
+  .container {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background: #dc143c;
+    border: 2px solid white;
+    position: relative;
+  }
+  
+  /* Botón detrás de las puertas */
+  .boton-central {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: #dc143c; /* Rojo carmesí */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Puertas encima del botón */
+  .puerta {
+    flex: 1;
+    background: linear-gradient(45deg, #ffffff, #d8abff, #86cdff);
+    transition: clip-path 1s ease-in-out;
+  }
+  

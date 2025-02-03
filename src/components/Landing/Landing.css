@@ -64,6 +64,11 @@
     animation: electricFrame 1s infinite;
   }
   
+  main {
+  display: flex;
+  flex-direction: column;
+  }
+  
   .main-content {
     flex-grow: 1;
     display: flex;
@@ -125,6 +130,7 @@
   }
 
   .login {
+    margin-top: 15px;
     background-color: var(--tertiary-color);
     border: solid 2px #005fc5;
     color: white;

@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.css";
 import LogoutButton from "../usersManagement/LogoutButton";
 import Header from "../header/header";
+import AnimatedDoors from "../reef/reef";
 
 const LandingPage = () => {
   return (
