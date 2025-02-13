@@ -15,7 +15,7 @@ body {
     flex-direction: row;
     overflow: hidden;
     background: #dc143c;
-    border: 2px solid white;
+    border: 2px solid rgb(88, 88, 88);
     position: relative;
   }
   

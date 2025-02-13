@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
      <header className="header">
-        <img className="logo" src={logo} alt="" height={100} />
+        <img className="logo" src={logo} alt="" height={135} />
         <h1>Studio 53</h1>  
         {isAuthenticated && <img className="userPic" src={user.picture} height={50} />}    
         {isAuthenticated && <LogoutButton /> }
