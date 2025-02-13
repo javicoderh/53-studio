@@ -19,7 +19,7 @@
 
 :root {
     --primary-color: #FF6700; /* Electric Orange */
-    --secondary-color: #fffff5; /* Light Beige */
+    --secondary-color: #c9bda0; /* Light Beige */
     --tertiary-color: #007FFF; /* Electric Blue */
   }
   
@@ -36,7 +36,7 @@
   .header {
     position: relative;
     background-color: var(--secondary-color);
-    color: #333;
+    color: #ffffff;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 4px 10px 1px rgba(102, 99, 99, 0.7);
@@ -47,10 +47,10 @@
   .header h1 {
     font-size: 2rem;
     text-shadow: 
-    0px 0 var(--tertiary-color),  /* Sombra a la derecha */
-    -1px 0 var(--tertiary-color), /* Sombra a la izquierda */
-    0 1px var(--tertiary-color),  /* Sombra abajo */
-    0 0px var(--tertiary-color); /* Sombra arriba */
+    0px 0 #333,  /* Sombra a la derecha */
+    -1px 0 #333, /* Sombra a la izquierda */
+    0 1px #333,  /* Sombra abajo */
+    0 0px #333; /* Sombra arriba */
     margin: 0;
     font-weight: 100 !important;
   }
@@ -74,7 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color: #d45500;;
     padding: 1.5rem;
     font-family: Inter,sans-serif;
     font-weight: 100;
